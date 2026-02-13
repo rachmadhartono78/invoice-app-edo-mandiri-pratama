@@ -3,7 +3,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ config('app.name', 'Invoice App') }}</title>
+    <title>@yield('title', config('app.name', 'Invoice App'))</title>
+    <meta name="description" content="@yield('meta_description', 'Professional Invoice App for streamlined billing and management.')">
+    <meta name="keywords" content="@yield('meta_keywords', 'invoice, billing, management, finance')">
+    <meta name="author" content="{{ config('app.name') }}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="@yield('title', config('app.name', 'Invoice App'))">
+    <meta property="og:description" content="@yield('meta_description', 'Professional Invoice App for streamlined billing and management.')">
+    <meta property="og:image" content="{{ asset('images/og-image.jpg') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="@yield('title', config('app.name', 'Invoice App'))">
+    <meta property="twitter:description" content="@yield('meta_description', 'Professional Invoice App for streamlined billing and management.')">
+    <meta property="twitter:image" content="{{ asset('images/og-image.jpg') }}">
+    
+    @yield('meta')
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -193,7 +212,7 @@
 <body>
     <nav class="navbar">
         <a href="{{ url('/') }}" class="navbar-brand">
-            <span>⚡</span> Invoice App
+            <span>⚡</span> {{ config('app.name') }}
         </a>
         <div class="nav-actions">
             <!-- Theme Toggle -->
