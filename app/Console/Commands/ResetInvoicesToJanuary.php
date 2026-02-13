@@ -30,7 +30,7 @@ class ResetInvoicesToJanuary extends Command
     {
         $this->info("Resetting all invoices to January 2026...");
 
-        $invoices = Invoice::orderBy('created_at')->get();
+        $invoices = Invoice::withTrashed()->orderBy('created_at')->get();
 
         if ($invoices->isEmpty()) {
             $this->info("No invoices found.");
@@ -42,6 +42,12 @@ class ResetInvoicesToJanuary extends Command
         }
 
         DB::transaction(function () use ($invoices) {
+            // Step 1: Temporary rename to avoid unique constraint violations
+            foreach ($invoices as $invoice) {
+                $invoice->invoice_number = "TEMP-" . $invoice->id . "-" . uniqid();
+                $invoice->save();
+            }
+
             $counter = 1;
 
             foreach ($invoices as $index => $invoice) {

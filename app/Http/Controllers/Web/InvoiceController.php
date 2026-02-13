@@ -33,7 +33,8 @@ class InvoiceController extends Controller
             'invoice' => $invoice
         ])->setPaper('a4', 'portrait');
 
-        return $pdf->stream("Invoice-{$invoice->invoice_number}.pdf");
+        $filename = 'Invoice-' . str_replace('/', '-', $invoice->invoice_number) . '.pdf';
+        return $pdf->stream($filename);
     }
 
     /**
