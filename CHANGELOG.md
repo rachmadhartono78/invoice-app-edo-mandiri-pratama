@@ -2,6 +2,14 @@
 
 ## [Unreleased](https://github.com/laravel/laravel/compare/v12.11.2...12.x)
 
+### Added
+- SEO meta tags (description, keywords, author) to `app.blade.php` and `guest.blade.php` layouts.
+- Open Graph and Twitter Card tags for better social media sharing.
+- `robots.txt` file to allow search engine indexing.
+
+### Changed
+- Updated application title to use dynamic configuration (`APP_NAME`) instead of hardcoded text in layouts.
+
 ## [v12.11.2](https://github.com/laravel/laravel/compare/v12.11.1...v12.11.2) - 2026-01-19
 
 * [12.x] Update composer dev script to ensure no timeout by [@jackbayliss](https://github.com/jackbayliss) in https://github.com/laravel/laravel/pull/6735
