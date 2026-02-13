@@ -1,54 +1,54 @@
 @extends('layouts.app')
 
 @section('content')
-<div style="display: flex; height: calc(100vh - 100px); gap: 20px;">
+<div class="flex flex-col lg:flex-row h-auto lg:h-[calc(100vh-100px)] gap-6">
     <!-- Sidebar / Controls -->
-    <div style="width: 300px; padding: 20px; background: var(--card-bg, white); border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); display: flex; flex-direction: column;">
-        <h2 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 20px; color: var(--text-color);">Print Settings</h2>
+    <div class="w-full lg:w-[300px] p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm flex flex-col h-auto lg:h-full order-1 lg:order-none">
+        <h2 class="text-xl font-bold mb-6 text-gray-800 dark:text-white">Print Settings</h2>
         
-        <div style="margin-bottom: 20px;">
-            <label style="display: block; font-weight: 600; margin-bottom: 10px; color: var(--text-color);">Select Template</label>
+        <div class="mb-6">
+            <label class="block font-semibold mb-3 text-gray-700 dark:text-gray-300">Select Template</label>
             
-            <div style="display: flex; flex-direction: column; gap: 10px;">
-                <label style="display: flex; align-items: center; padding: 10px; border: 1px solid var(--border-color, #e5e7eb); border-radius: 6px; cursor: pointer; transition: all 0.2s; background: var(--input-bg, transparent);">
-                    <input type="radio" name="template" value="simple" checked onchange="updatePreview()" style="margin-right: 10px;">
+            <div class="flex flex-col gap-3">
+                <label class="flex items-center p-3 border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors group">
+                    <input type="radio" name="template" value="simple" checked onchange="updatePreview()" class="mr-3 text-blue-600 focus:ring-blue-500">
                     <div>
-                        <div style="font-weight: 600; color: var(--text-color);">Simple</div>
-                        <div style="font-size: 0.8rem; color: var(--text-secondary, #6b7280);">Classic Formal Style</div>
+                        <div class="font-semibold text-gray-800 dark:text-white group-hover:text-blue-600 transition-colors">Simple</div>
+                        <div class="text-xs text-gray-500 dark:text-gray-400">Classic Formal Style</div>
                     </div>
                 </label>
 
-                <label style="display: flex; align-items: center; padding: 10px; border: 1px solid var(--border-color, #e5e7eb); border-radius: 6px; cursor: pointer; transition: all 0.2s; background: var(--input-bg, transparent);">
-                    <input type="radio" name="template" value="modern" onchange="updatePreview()" style="margin-right: 10px;">
+                <label class="flex items-center p-3 border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors group">
+                    <input type="radio" name="template" value="modern" onchange="updatePreview()" class="mr-3 text-blue-600 focus:ring-blue-500">
                     <div>
-                        <div style="font-weight: 600; color: var(--text-color);">Modern</div>
-                        <div style="font-size: 0.8rem; color: var(--text-secondary, #6b7280);">Keling Studio Style</div>
+                        <div class="font-semibold text-gray-800 dark:text-white group-hover:text-blue-600 transition-colors">Modern</div>
+                        <div class="text-xs text-gray-500 dark:text-gray-400">Keling Studio Style</div>
                     </div>
                 </label>
 
-                <label style="display: flex; align-items: center; padding: 10px; border: 1px solid var(--border-color, #e5e7eb); border-radius: 6px; cursor: pointer; transition: all 0.2s; background: var(--input-bg, transparent);">
-                    <input type="radio" name="template" value="business" onchange="updatePreview()" style="margin-right: 10px;">
+                <label class="flex items-center p-3 border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors group">
+                    <input type="radio" name="template" value="business" onchange="updatePreview()" class="mr-3 text-blue-600 focus:ring-blue-500">
                     <div>
-                        <div style="font-weight: 600; color: var(--text-color);">Business</div>
-                        <div style="font-size: 0.8rem; color: var(--text-secondary, #6b7280);">Bold & Professional</div>
+                        <div class="font-semibold text-gray-800 dark:text-white group-hover:text-blue-600 transition-colors">Business</div>
+                        <div class="text-xs text-gray-500 dark:text-gray-400">Bold & Professional</div>
                     </div>
                 </label>
             </div>
         </div>
 
-        <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px;">
-            <a id="downloadBtn" href="#" target="_blank" class="btn btn-primary" style="text-align: center; justify-content: center;">
+        <div class="mt-auto flex flex-col gap-3">
+            <a id="downloadBtn" href="#" target="_blank" class="btn btn-primary w-full text-center justify-center">
                 Download PDF
             </a>
-            <a href="{{ route('invoices.show', $invoice) }}" class="btn btn-outline" style="text-align: center; justify-content: center;">
+            <a href="{{ route('invoices.show', $invoice) }}" class="btn btn-outline w-full text-center justify-center">
                 Cancel
             </a>
         </div>
     </div>
 
     <!-- Preview Area -->
-    <div style="flex: 1; background: #525659; border-radius: 8px; overflow: hidden; display: flex; justify-content: center; align-items: center;">
-        <iframe id="pdfPreview" src="" style="width: 100%; height: 100%; border: none;"></iframe>
+    <div class="w-full lg:flex-1 bg-gray-600 rounded-lg overflow-hidden flex justify-center items-center h-[500px] lg:h-full shadow-inner order-2 lg:order-none">
+        <iframe id="pdfPreview" src="" class="w-full h-full border-none"></iframe>
     </div>
 </div>
 
