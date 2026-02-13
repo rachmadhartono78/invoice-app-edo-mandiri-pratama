@@ -154,19 +154,29 @@
     @media (max-width: 768px) {
         .hero-title { font-size: 2.5rem; }
         
-        /* Responsive Dashboard Preview */
+        /* Responsive Dashboard Preview - Scrollable */
+        .dashboard-preview {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .browser-bar {
+            min-width: 800px; /* Force minimum width to trigger scroll */
+        }
+
         .preview-grid {
-            grid-template-columns: 1fr;
-            padding: 1rem;
-            gap: 1rem;
+            min-width: 800px; /* Keep desktop layout width */
+            grid-template-columns: 200px 1fr; /* Maintain desktop grid */
+            padding: 2rem;
+            gap: 2rem;
         }
         
         .preview-sidebar {
-            display: none; /* Hide sidebar on mobile for cleaner look */
+            display: flex; /* Show sidebar again */
         }
         
         .preview-stats {
-            grid-template-columns: repeat(1, 1fr); /* Stack stats */
+            grid-template-columns: repeat(3, 1fr); /* Maintain desktop columns */
         }
     }
 </style>
