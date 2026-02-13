@@ -6,11 +6,65 @@
     <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem;">Overview of your business performance.</p>
 </div>
 
+<style>
+    /* Dashboard Stats Grid */
+    .stats-grid {
+        display: grid;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+        /* Default: Laptop/Desktop - Force 3 columns if space permits, else wrap gracefully but keep them side-by-side as much as possible */
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    /* Card adjustments */
+    .stats-card {
+        padding: 1.25rem; /* Slightly smaller padding */
+        transition: transform 0.2s;
+        height: 100%; /* Ensure equal height */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .stats-value {
+        font-size: 1.75rem; /* Slightly smaller font */
+        font-weight: 800;
+        margin: 0;
+    }
+
+    /* Mobile specific overrides */
+    @media (max-width: 768px) {
+        .stats-grid {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 1rem; /* Space for scrollbar */
+            gap: 1rem;
+            margin-right: -1rem; /* Compensate for right padding of container */
+            padding-right: 1rem;
+        }
+
+        .stats-card {
+            min-width: 85vw; /* Show mostly one card with a peek of the next */
+            max-width: 300px; /* Don't get too wide on larger phones */
+            scroll-snap-align: start;
+            flex-shrink: 0;
+        }
+    }
+    
+    /* Laptop specific - adjustments if needed */
+    @media (min-width: 1024px) {
+        .stats-grid {
+            grid-template-columns: repeat(3, 1fr); /* Strictly 3 columns on larger screens */
+        }
+    }
+</style>
+
 <!-- Stats Cards -->
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
+<div class="stats-grid">
     
     <!-- Revenue Card -->
-    <div class="card" style="padding: 1.5rem; transition: transform 0.2s;">
+    <div class="card stats-card">
         <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
             <div style="width: 3rem; height: 3rem; background-color: var(--primary-light); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; color: var(--primary-color);">
                 <!-- Trending Up Icon -->
@@ -35,12 +89,12 @@
         </div>
         <div>
             <p style="color: var(--text-secondary); font-size: 0.875rem; font-weight: 500; margin-bottom: 0.25rem;">Total Revenue</p>
-            <h3 style="font-size: 2rem; font-weight: 800; margin: 0;">Rp {{ number_format($totalRevenue, 0, ',', '.') }}</h3>
+            <h3 class="stats-value">Rp {{ number_format($totalRevenue, 0, ',', '.') }}</h3>
         </div>
     </div>
     
     <!-- Pending Invoices Card -->
-    <div class="card" style="padding: 1.5rem; transition: transform 0.2s;">
+    <div class="card stats-card">
         <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
             <div style="width: 3rem; height: 3rem; background-color: #fff7ed; border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; color: #f97316;">
                 <!-- Clock / Hourglass Icon -->
@@ -52,12 +106,12 @@
         </div>
         <div>
             <p style="color: var(--text-secondary); font-size: 0.875rem; font-weight: 500; margin-bottom: 0.25rem;">Outstanding Amount</p>
-            <h3 style="font-size: 2rem; font-weight: 800; margin: 0;">Rp {{ number_format($pendingInvoicesAmount, 0, ',', '.') }}</h3>
+            <h3 class="stats-value">Rp {{ number_format($pendingInvoicesAmount, 0, ',', '.') }}</h3>
         </div>
     </div>
     
     <!-- Clients Card -->
-    <div class="card" style="padding: 1.5rem; transition: transform 0.2s;">
+    <div class="card stats-card">
         <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
             <div style="width: 3rem; height: 3rem; background-color: #f0fdf4; border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; color: #16a34a;">
                 <!-- Users Group Icon -->
@@ -69,7 +123,7 @@
         </div>
         <div>
             <p style="color: var(--text-secondary); font-size: 0.875rem; font-weight: 500; margin-bottom: 0.25rem;">Total Clients</p>
-            <h3 style="font-size: 2rem; font-weight: 800; margin: 0;">{{ $totalClients }}</h3>
+            <h3 class="stats-value">{{ $totalClients }}</h3>
         </div>
     </div>
 </div>
