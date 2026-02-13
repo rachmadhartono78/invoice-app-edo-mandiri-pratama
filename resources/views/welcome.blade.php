@@ -11,15 +11,6 @@
                     radial-gradient(circle at bottom left, rgba(236, 72, 153, 0.1) 0%, transparent 40%);
     }
 
-    /* Premium Hero Section */
-    .hero-wrapper {
-        position: relative;
-        overflow: hidden;
-        padding: 6rem 1rem 4rem;
-        background: radial-gradient(circle at top right, rgba(79, 70, 229, 0.1) 0%, transparent 40%),
-                    radial-gradient(circle at bottom left, rgba(236, 72, 153, 0.1) 0%, transparent 40%);
-    }
-
     .hero-content {
         max-width: 1000px;
         margin: 0 auto;
@@ -33,12 +24,12 @@
         align-items: center;
         padding: 0.25rem 0.75rem;
         background: rgba(79, 70, 229, 0.1);
-        color: var(--primary-color);
+        color: #4f46e5; /* Indigo 600 */
         border-radius: 9999px;
         font-size: 0.875rem;
         font-weight: 600;
         margin-bottom: 1.5rem;
-        border: 1px solid var(--border-color);
+        border: 1px solid rgba(79, 70, 229, 0.2);
     }
 
     .hero-title {
@@ -51,7 +42,7 @@
     }
 
     .hero-title span {
-        background: linear-gradient(to right, #4f46e5, #9333ea);
+        background: linear-gradient(to right, #4f46e5, #9333ea); /* Indigo to Purple */
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -60,7 +51,7 @@
         font-size: 1.25rem;
         color: var(--text-secondary);
         margin-bottom: 2.5rem;
-        max-width: 600px;
+        max-width: 700px;
         margin-left: auto;
         margin-right: auto;
         line-height: 1.6;
@@ -75,15 +66,17 @@
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
+        text-decoration: none;
     }
 
     .btn-hero-primary {
-        background: var(--primary-color);
+        background: #4f46e5; /* Indigo 600 */
         color: white;
         box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
     }
 
     .btn-hero-primary:hover {
+        background: #4338ca; /* Indigo 700 */
         transform: translateY(-2px);
         box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.4);
     }
@@ -127,7 +120,7 @@
     }
 
     .feature-card:hover {
-        border-color: var(--primary-color);
+        border-color: #4f46e5;
         box-shadow: var(--card-shadow);
         transform: translateY(-4px);
     }
@@ -139,29 +132,30 @@
 
 <div class="hero-wrapper">
     <div class="hero-content">
-        <span class="badge-new">✨ New v2.0 Released</span>
+        <span class="badge-new">✨ Official Partner Procurement</span>
         <h1 class="hero-title">
-            Invoicing Made <br>
-            <span>Simple & Professional</span>
+            Solusi Pengadaan <br>
+            <span>Program Makan Bergizi</span>
         </h1>
         <p class="hero-subtitle">
-            Stop wasting time on spreadsheets. Create, track, and manage your business invoices in one beautiful dashboard.
+            Kami menyediakan peralatan pendukung logistik, distribusi makanan, dan perlengkapan operasional perusahaan dengan standar kualitas terbaik, transparan, dan akuntabel.
         </p>
         
-        <div style="display: flex; gap: 1rem; justify-content: center;">
-            @guest
-                <a href="{{ route('register') }}" class="btn-hero btn-hero-primary">
-                    Get Started Free
-                    <svg style="width:1.25rem;height:1.25rem" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
-                </a>
-                <a href="{{ route('login') }}" class="btn-hero" style="background: var(--white); color: var(--text-color); border: 1px solid var(--border-color);">
-                    Sign In
-                </a>
-            @else
-                <a href="{{ route('dashboard') }}" class="btn-hero btn-hero-primary">
-                    Go to Dashboard
-                </a>
-            @endguest
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="#services" class="btn-hero btn-hero-primary">
+                Lihat Layanan
+            </a>
+            @if (Route::has('login'))
+                @auth
+                    <a href="{{ url('/dashboard') }}" class="btn-hero" style="background: var(--white); color: var(--text-color); border: 1px solid var(--border-color);">
+                        Dashboard
+                    </a>
+                @else
+                    <a href="{{ route('login') }}" class="btn-hero" style="background: var(--white); color: var(--text-color); border: 1px solid var(--border-color);">
+                        Login Portal
+                    </a>
+                @endauth
+            @endif
         </div>
 
         <!-- Abstract Dashboard Preview -->
@@ -196,39 +190,87 @@
     </div>
 </div>
 
-<div class="features-section">
+<div class="features-section" id="services">
     <div style="max-width: 1200px; margin: 0 auto;">
         <div style="text-align: center; margin-bottom: 4rem;">
-            <h2 style="font-size: 2.25rem; font-weight: 700; color: var(--text-color); margin-bottom: 1rem;">Everything you need.</h2>
-            <p style="color: var(--text-secondary); font-size: 1.1rem;">Powerful features to help you get paid faster.</p>
+            <h2 style="font-size: 2.25rem; font-weight: 700; color: var(--text-color); margin-bottom: 1rem;">Layanan Kami</h2>
+            <p style="color: var(--text-secondary); font-size: 1.1rem;">Solusi Pengadaan Terintegrasi untuk program makan bergizi.</p>
         </div>
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
             <!-- Feature 1 -->
             <div class="feature-card">
-                <div style="width: 3rem; height: 3rem; background: rgba(79, 70, 229, 0.1); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; color: var(--primary-color); margin-bottom: 1.5rem;">
-                    <svg style="width:1.5rem;height:1.5rem" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                <div style="width: 3rem; height: 3rem; background: rgba(79, 70, 229, 0.1); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; color: #4f46e5; margin-bottom: 1.5rem;">
+                    <svg style="width:1.5rem;height:1.5rem" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
                 </div>
-                <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-color);">Lightning Fast</h3>
-                <p style="color: var(--text-secondary); line-height: 1.6;">Create and send invoices in under 60 seconds. Pre-save your products and clients for instant auto-fill.</p>
+                <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-color);">Peralatan Program Makan Bergizi</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6;">Penyediaan container distribusi, box logistik, thermal bag, dan perlengkapan penyimpanan makanan skala besar yang higienis.</p>
+                 <ul style="margin-top: 1rem; padding-left: 0; list-style: none; color: var(--text-secondary); font-size: 0.9rem;">
+                    <li style="margin-bottom: 0.5rem;">• Food Grade Container</li>
+                    <li style="margin-bottom: 0.5rem;">• Thermal Delivery Box</li>
+                    <li>• Logistik Distribusi</li>
+                </ul>
             </div>
             
             <!-- Feature 2 -->
              <div class="feature-card">
-                <div style="width: 3rem; height: 3rem; background: rgba(16, 185, 129, 0.1); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; color: #10b981; margin-bottom: 1.5rem;">
-                    <svg style="width:1.5rem;height:1.5rem" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <div style="width: 3rem; height: 3rem; background: rgba(147, 51, 234, 0.1); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; color: #9333ea; margin-bottom: 1.5rem;">
+                    <svg style="width:1.5rem;height:1.5rem" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
                 </div>
-                <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-color);">Get Paid Sooner</h3>
-                <p style="color: var(--text-secondary); line-height: 1.6;">Professional invoices look better and get paid faster. Track status in real-time.</p>
+                <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-color);">Peralatan Operasional</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6;">Pengadaan lunch box, cutlery set (sendok/garpu), tray stainless/plastik, dan packaging operasional harian.</p>
+                 <ul style="margin-top: 1rem; padding-left: 0; list-style: none; color: var(--text-secondary); font-size: 0.9rem;">
+                    <li style="margin-bottom: 0.5rem;">• Stainless Tray & Cutlery</li>
+                    <li style="margin-bottom: 0.5rem;">• Eco-friendly Packaging</li>
+                    <li>• Bulk Equipment</li>
+                </ul>
             </div>
             
             <!-- Feature 3 -->
              <div class="feature-card">
-                <div style="width: 3rem; height: 3rem; background: rgba(245, 158, 11, 0.1); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; color: #d97706; margin-bottom: 1.5rem;">
-                     <svg style="width:1.5rem;height:1.5rem" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <div style="width: 3rem; height: 3rem; background: rgba(236, 72, 153, 0.1); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; color: #ec4899; margin-bottom: 1.5rem;">
+                     <svg style="width:1.5rem;height:1.5rem" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
                 </div>
-                <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-color);">Financial Insights</h3>
-                <p style="color: var(--text-secondary); line-height: 1.6;">Visualize your revenue, tax liabilities, and best clients with beautiful charts.</p>
+                <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-color);">Layanan Ekspansi</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6;">Solusi masa depan yang disesuaikan dengan kebutuhan bisnis Anda yang terus berkembang.</p>
+                <div style="margin-top: 1rem;">
+                    <span style="font-size: 0.8rem; background: rgba(236, 72, 153, 0.1); color: var(--text-secondary); padding: 0.25rem 0.5rem; border-radius: 4px;">Segera Hadir</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="background: var(--white); border-top: 1px solid var(--border-color); padding: 4rem 1rem;" id="contact">
+    <div style="max-width: 1200px; margin: 0 auto;">
+         <div style="text-align: center; margin-bottom: 3rem;">
+            <h2 style="font-size: 1.8rem; font-weight: 700; color: var(--text-color);">Hubungi Kami</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; text-align: left;">
+            <div>
+                <h3 style="font-weight: 700; margin-bottom: 1rem; color: var(--text-color);">Kantor Pusat</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6;">
+                    <strong>RAJA DUNIA DAPUR</strong><br>
+                    by PT EDO MANDIRI PRATAMA<br><br>
+                    Jl. HOS Cokroaminoto Blok C2, Kreo,<br>
+                    Kec. Larangan, Kota Tangerang, Banten 15156
+                </p>
+            </div>
+            <div>
+                 <h3 style="font-weight: 700; margin-bottom: 1rem; color: var(--text-color);">Kontak WhatsApp</h3>
+                 <p style="color: var(--text-secondary); line-height: 1.6;">
+                    <strong>Annisa Nurliani (Aen/Ica):</strong><br>
+                     0877-8762-0888<br><br>
+                    <strong>Bagus:</strong><br>
+                    0878-7838-1090
+                 </p>
+            </div>
+             <div>
+                 <h3 style="font-weight: 700; margin-bottom: 1rem; color: var(--text-color);">Layanan</h3>
+                 <p style="color: var(--text-secondary); line-height: 1.6;">
+                    Jam Operasional: Buka 24 Jam<br>
+                    Layanan Support: 24/7
+                 </p>
             </div>
         </div>
     </div>
