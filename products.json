@@ -1,0 +1,494 @@
+[
+  {
+    "name": "Timbangan 150kg",
+    "description": "400x500 mm",
+    "price": 900000.0,
+    "category": "AREA DATANG BARANG"
+  },
+  {
+    "name": "Loading Trolley",
+    "description": "450x725x920",
+    "price": 2500000.0,
+    "category": "AREA DATANG BARANG"
+  },
+  {
+    "name": "Transit Table Backsplash",
+    "description": "1500x600x850",
+    "price": 3200000.0,
+    "category": "AREA DATANG BARANG"
+  },
+  {
+    "name": "Single Sink Knockdown",
+    "description": "600x600x800",
+    "price": 2400000.0,
+    "category": "AREA DATANG BARANG"
+  },
+  {
+    "name": "Triple Sink Knockdown",
+    "description": "1200x600x800",
+    "price": 4000000.0,
+    "category": "AREA CUCI OMPRENG"
+  },
+  {
+    "name": "Long Sink Knockdown",
+    "description": "1700x600x800",
+    "price": 4000000.0,
+    "category": "AREA CUCI OMPRENG"
+  },
+  {
+    "name": "Grease Trap",
+    "description": "500x300x300",
+    "price": 1300000.0,
+    "category": "AREA CUCI OMPRENG"
+  },
+  {
+    "name": "Pengering 210 Tray",
+    "description": "LISTRIK",
+    "price": 11000000.0,
+    "category": "AREA CUCI OMPRENG"
+  },
+  {
+    "name": "Water Heater 30L",
+    "description": "ARISTON",
+    "price": 4500000.0,
+    "category": "AREA CUCI OMPRENG"
+  },
+  {
+    "name": "Rak Tiris 4 Susun Knockdown",
+    "description": "1500x500x1550",
+    "price": 3200000.0,
+    "category": "AREA CUCI OMPRENG"
+  },
+  {
+    "name": "Solid Rak 4 Susun Knockdown",
+    "description": "1500x500x1550",
+    "price": 3000000.0,
+    "category": "GUDANG KERING & ALAT"
+  },
+  {
+    "name": "Palet Plastik",
+    "description": "100x100x15",
+    "price": 380000.0,
+    "category": "GUDANG KERING & ALAT"
+  },
+  {
+    "name": "Chest Frezeer",
+    "description": "500 L",
+    "price": 9000000.0,
+    "category": "AREA GUDANG BASAH"
+  },
+  {
+    "name": "Showcase 2 Pintu",
+    "description": "1400x600x2000",
+    "price": 10500000.0,
+    "category": "AREA GUDANG BASAH"
+  },
+  {
+    "name": "Solid Rack 4 Tier Knockdown",
+    "description": "1500x500x1550",
+    "price": 3000000.0,
+    "category": "AREA GUDANG BASAH"
+  },
+  {
+    "name": "Rice Steamer 12 tray",
+    "description": "720x650x1650",
+    "price": 9500000.0,
+    "category": "AREA MASAK"
+  },
+  {
+    "name": "Gas Stock Pot High Pressure",
+    "description": "600x600x500",
+    "price": 3200000.0,
+    "category": "AREA MASAK"
+  },
+  {
+    "name": "Gas Stock Pot Low Pressure",
+    "description": "500x500x760",
+    "price": 2500000.0,
+    "category": "AREA MASAK"
+  },
+  {
+    "name": "Kwali Range Single",
+    "description": "485x600x800",
+    "price": 2800000.0,
+    "category": "AREA MASAK"
+  },
+  {
+    "name": "Kwali Range Double w/ Blower",
+    "description": "1300x800 x 800/1150",
+    "price": 8500000.0,
+    "category": "AREA MASAK"
+  },
+  {
+    "name": "Transit Table Backsplash",
+    "description": "1500x600x850",
+    "price": 3200000.0,
+    "category": "AREA MASAK"
+  },
+  {
+    "name": "Gastronom",
+    "description": "380x550x1750",
+    "price": 2300000.0,
+    "category": "AREA MASAK"
+  },
+  {
+    "name": "Double Sink Knockdown",
+    "description": "1200x600x800",
+    "price": 3000000.0,
+    "category": "AREA MASAK"
+  },
+  {
+    "name": "Service Trolley 3 Tiers",
+    "description": "805x460x905",
+    "price": 2300000.0,
+    "category": "AREA PERSIAPAN"
+  },
+  {
+    "name": "Service Trolley 2 Tier",
+    "description": "805x460x900",
+    "price": 2100000.0,
+    "category": "AREA PERSIAPAN"
+  },
+  {
+    "name": "Working Table Knockdown",
+    "description": "2000x800x800",
+    "price": 4000000.0,
+    "category": "AREA PERSIAPAN"
+  },
+  {
+    "name": "Food Tray Stainless",
+    "description": "Tinggi 6cm",
+    "price": 35000.0,
+    "category": "AREA PERSIAPAN"
+  },
+  {
+    "name": "Meja Pemorsian Knockdown",
+    "description": "2000x800x800",
+    "price": 4000000.0,
+    "category": "AREA PEMORSIAN"
+  },
+  {
+    "name": "Meja Rail Pemorsian",
+    "description": "3000x1300x800",
+    "price": 5000000.0,
+    "category": "AREA PEMORSIAN"
+  },
+  {
+    "name": "Solid Rack 4 Tier Knockdown",
+    "description": "1500x500x1550",
+    "price": 3000000.0,
+    "category": "AREA PEMORSIAN"
+  },
+  {
+    "name": "Talenan Kayu",
+    "description": "42x29,5x26",
+    "price": 70000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Talenan Daging",
+    "description": "45cm",
+    "price": 185000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Cadangan Tray",
+    "description": "50x30x7cm",
+    "price": 160000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Pisau Daging sus 304",
+    "description": "30x17x8cm",
+    "price": 150000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Pisau Buah sus 304",
+    "description": "24cm",
+    "price": 85000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Pisau Sayur sus 304",
+    "description": "33x21x4,5cm",
+    "price": 75000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Manual Peeler Stainless",
+    "description": "",
+    "price": 15000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Panci (Stock Pot)",
+    "description": "44,5x34",
+    "price": 850000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Kukusan (Steamer) 3 Tingkat",
+    "description": "55,5x 55,5x 48cm",
+    "price": 1000000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Presto 12 Liter",
+    "description": "45 x 34 x 32 cm",
+    "price": 550000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Spatula",
+    "description": "",
+    "price": 130000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Gayung Stainless",
+    "description": "",
+    "price": 130000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Wajan Besar 80cm",
+    "description": "",
+    "price": 650000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Wajan Besar 60cm",
+    "description": "",
+    "price": 550000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Wajan Besar 55cm",
+    "description": "",
+    "price": 425000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Food Pan",
+    "description": "52x32x15 cm",
+    "price": 135000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Topi masak",
+    "description": "Isi 50 pcs",
+    "price": 185000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Tempat Sampah 70 Liter",
+    "description": "",
+    "price": 300000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Double Sink Knockdown",
+    "description": "1200x600x800",
+    "price": 3000000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Tempat Sampah 100 Liter",
+    "description": "",
+    "price": 450000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Rak Sepatu Karyawan Stainless",
+    "description": "",
+    "price": 250000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Loker Karyawan 24 Pintu",
+    "description": "",
+    "price": 3200000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Mesin Potong Sayur",
+    "description": "",
+    "price": 5500000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Blender 2 liter",
+    "description": "",
+    "price": 1200000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Timbangan 40kg",
+    "description": "",
+    "price": 350000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Baskom Solid Stainless",
+    "description": "80cm",
+    "price": 150000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Baskom Sungku Lubang",
+    "description": "70cm",
+    "price": 185000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Asahan Pisau",
+    "description": "",
+    "price": 500000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Sendok Nasi Stainless",
+    "description": "",
+    "price": 25000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "APAR Powder 3 Kg",
+    "description": "",
+    "price": 450000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "P3K dan isinya",
+    "description": "",
+    "price": 300000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Insect Killer",
+    "description": "",
+    "price": 350000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Alat Ukur Suhu Ruangan",
+    "description": "",
+    "price": 200000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Gantungan Pakaian",
+    "description": "",
+    "price": 175000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Kursi Plastik Senderan Kecil",
+    "description": "",
+    "price": 75000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Kursi Plastik Tinggi",
+    "description": "",
+    "price": 60000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Dispenser",
+    "description": "",
+    "price": 1800000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Serok Biasa 34",
+    "description": "",
+    "price": 80000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Serok Biasa 26",
+    "description": "",
+    "price": 60000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Serok Stainless 32",
+    "description": "",
+    "price": 125000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Pencapit Makanan",
+    "description": "",
+    "price": 25000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Keset",
+    "description": "",
+    "price": 50000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Jerigen 30 L",
+    "description": "",
+    "price": 80000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Kipas Angin Dinding",
+    "description": "",
+    "price": 400000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Bakul Nasi 55 cm",
+    "description": "",
+    "price": 85000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Pemantik Api",
+    "description": "",
+    "price": 20000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "ember besar 48 cm",
+    "description": "",
+    "price": 80000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "keranjang buah besar",
+    "description": "",
+    "price": 80000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "keranjang sayur besar",
+    "description": "",
+    "price": 80000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Alat Pel",
+    "description": "",
+    "price": 225000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Sapu Pengki",
+    "description": "",
+    "price": 200000.0,
+    "category": "PELENGKAP DAPUR"
+  },
+  {
+    "name": "Cetakan Nasi",
+    "description": "",
+    "price": 10000.0,
+    "category": "PELENGKAP DAPUR"
+  }
+]

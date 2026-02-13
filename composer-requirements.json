@@ -1,0 +1,8 @@
+{
+  "require": {
+    "barryvdh/laravel-dompdf": "^2.0"
+  },
+  "require-dev": {
+    "phpoffice/phpspreadsheet": "^1.29"
+  }
+}

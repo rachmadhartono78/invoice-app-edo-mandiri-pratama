@@ -1,0 +1,14 @@
+
+> build
+> vite build
+
+You are using Node.js 20.18.0. Vite requires Node.js version 20.19+ or 22.12+. Please upgrade your Node.js version.
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+[32mΓ£ô[39m 0 modules transformed.
+Γ£ù Build failed in 34ms
+error during build:
+Could not resolve entry module "resources/css/app.css".
+    at getRollupError (file:///C:/Users/Lenovo/Documents/visual-studiocode/invoice-app-package/node_modules/rollup/dist/es/shared/parseAst.js:402:41)
+    at error (file:///C:/Users/Lenovo/Documents/visual-studiocode/invoice-app-package/node_modules/rollup/dist/es/shared/parseAst.js:398:42)
+    at ModuleLoader.loadEntryModule (file:///C:/Users/Lenovo/Documents/visual-studiocode/invoice-app-package/node_modules/rollup/dist/es/shared/node-entry.js:21708:20)
+    at async Promise.all (index 0)
