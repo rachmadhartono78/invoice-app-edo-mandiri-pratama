@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="flex flex-col lg:flex-row h-auto lg:h-[calc(100vh-100px)] gap-6">
+<div class="flex flex-col md:flex-row h-auto md:h-[calc(100vh-100px)] gap-6">
     <!-- Sidebar / Controls -->
-    <div class="w-full lg:w-[300px] p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm flex flex-col h-auto lg:h-full order-1 lg:order-none">
+    <div class="w-full md:w-[300px] p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm flex flex-col h-auto md:h-full order-1 md:order-none">
         <h2 class="text-xl font-bold mb-6 text-gray-800 dark:text-white">Print Settings</h2>
         
         <div class="mb-6">
@@ -47,7 +47,7 @@
     </div>
 
     <!-- Preview Area -->
-    <div class="w-full lg:flex-1 bg-gray-600 rounded-lg overflow-hidden flex justify-center items-center h-[500px] lg:h-full shadow-inner order-2 lg:order-none">
+    <div class="w-full md:flex-1 bg-gray-600 rounded-lg overflow-hidden flex justify-center items-center h-[500px] md:h-full shadow-inner order-2 md:order-none">
         <iframe id="pdfPreview" src="" class="w-full h-full border-none"></iframe>
     </div>
 </div>
