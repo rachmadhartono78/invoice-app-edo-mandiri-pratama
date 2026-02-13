@@ -5,7 +5,7 @@
     <div style="position: sticky; top: 0; z-index: 10; background: var(--bg-color); padding: 1rem 0; border-bottom: 1px solid var(--border-color); margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center;">
         <div>
             <span style="color: var(--text-secondary); font-size: 0.875rem;">Editing Invoice</span>
-            <h1 style="font-size: 1.5rem; font-weight: 700; margin: 0;">{{ $invoice->invoice_number }}</h1>
+            <h1 style="font-size: 1.875rem; font-weight: 800; letter-spacing: -0.025em; margin: 0;">{{ $invoice->invoice_number }}</h1>
         </div>
         <div style="display: flex; gap: 0.5rem;">
             <a href="{{ url('/invoices/' . $invoice->id) }}" class="btn btn-outline" style="padding: 0.5rem 1rem;">Cancel</a>
@@ -30,21 +30,21 @@
                 </div>
                 <div>
                     <div style="margin-bottom: 1.5rem;">
-                        <label style="display: block; font-weight: 500; font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Customer Name <span style="color:#ef4444">*</span></label>
-                        <input type="text" name="customer_name" class="form-input" value="{{ old('customer_name', $invoice->customer_name) }}" placeholder="e.g. PT Maju Mundur" style="font-size: 1.1rem; padding: 0.75rem;" required>
+                        <label style="display: block; font-weight: 500; font-size: 0.875rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Customer Name <span style="color:#ef4444">*</span></label>
+                        <input type="text" name="customer_name" class="form-input" value="{{ old('customer_name', $invoice->customer_name) }}" placeholder="e.g. PT Maju Mundur" style="font-size: 0.95rem; padding: 0.6rem 0.8rem;" required>
                     </div>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
                         <div>
-                            <label style="display: block; font-weight: 500; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-secondary);">Phone (Optional)</label>
+                            <label style="display: block; font-weight: 500; font-size: 0.875rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Phone (Optional)</label>
                             <input type="text" name="customer_phone" class="form-input" value="{{ old('customer_phone', $invoice->customer_phone) }}" placeholder="0812...">
                         </div>
                         <div>
-                            <label style="display: block; font-weight: 500; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-secondary);">Email (Optional)</label>
+                            <label style="display: block; font-weight: 500; font-size: 0.875rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Email (Optional)</label>
                             <input type="email" name="customer_email" class="form-input" value="{{ old('customer_email', $invoice->customer_email) }}" placeholder="email@example.com">
                         </div>
                     </div>
                     <div style="margin-top: 1rem;">
-                        <label style="display: block; font-weight: 500; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-secondary);">Address (Optional)</label>
+                        <label style="display: block; font-weight: 500; font-size: 0.875rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Address (Optional)</label>
                         <textarea name="customer_address" class="form-input" rows="2" placeholder="Jalan...">{{ old('customer_address', $invoice->customer_address) }}</textarea>
                     </div>
                 </div>
@@ -60,19 +60,19 @@
                 <div>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.5rem;">
                         <div>
-                            <label style="display: block; font-weight: 500; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-secondary);">Number</label>
+                            <label style="display: block; font-weight: 500; font-size: 0.875rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Number</label>
                             <input type="text" name="invoice_number" class="form-input" value="{{ $invoice->invoice_number }}" readonly style="cursor: not-allowed; opacity: 0.7;">
                         </div>
                         <div>
-                            <label style="display: block; font-weight: 500; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-secondary);">Date</label>
+                            <label style="display: block; font-weight: 500; font-size: 0.875rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Date</label>
                             <input type="date" name="invoice_date" class="form-input" value="{{ old('invoice_date', $invoice->invoice_date->format('Y-m-d')) }}" required>
                         </div>
                         <div>
-                            <label style="display: block; font-weight: 500; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-secondary);">Due Date</label>
+                            <label style="display: block; font-weight: 500; font-size: 0.875rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Due Date</label>
                             <input type="date" name="due_date" class="form-input" value="{{ old('due_date', $invoice->due_date ? $invoice->due_date->format('Y-m-d') : '') }}">
                         </div>
                         <div>
-                            <label style="display: block; font-weight: 500; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-secondary);">Status</label>
+                            <label style="display: block; font-weight: 500; font-size: 0.875rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Status</label>
                             <select name="status" class="form-input">
                                 <option value="pending" {{ $invoice->status == 'pending' ? 'selected' : '' }}>Pending</option>
                                 <option value="paid" {{ $invoice->status == 'paid' ? 'selected' : '' }}>Paid</option>
@@ -130,10 +130,10 @@
             </section>
             
             <div style="margin-top: 2rem;">
-                <label style="display: block; font-weight: 500; font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Additional Notes</label>
+                <label style="display: block; font-weight: 500; font-size: 0.875rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Additional Notes</label>
                 <textarea name="notes" class="form-input" rows="3" placeholder="Payment details, terms, etc...">{{ old('notes', $invoice->notes) }}</textarea>
                 <div style="margin-top: 1rem;">
-                    <label style="display: block; font-weight: 500; font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Payment Terms</label>
+                    <label style="display: block; font-weight: 500; font-size: 0.875rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Payment Terms</label>
                     <textarea name="payment_terms" class="form-input" rows="2" placeholder="e.g. Net 30...">{{ old('payment_terms', $invoice->payment_terms) }}</textarea>
                 </div>
             </div>
