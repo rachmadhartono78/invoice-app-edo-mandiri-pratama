@@ -125,8 +125,49 @@
         transform: translateY(-4px);
     }
 
+    .preview-grid {
+        padding: 2rem;
+        background: var(--bg-color);
+        min-height: 300px;
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 2rem;
+    }
+
+    .preview-sidebar {
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .preview-main {
+        display: grid;
+        gap: 1.5rem;
+    }
+
+    .preview-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
     @media (max-width: 768px) {
         .hero-title { font-size: 2.5rem; }
+        
+        /* Responsive Dashboard Preview */
+        .preview-grid {
+            grid-template-columns: 1fr;
+            padding: 1rem;
+            gap: 1rem;
+        }
+        
+        .preview-sidebar {
+            display: none; /* Hide sidebar on mobile for cleaner look */
+        }
+        
+        .preview-stats {
+            grid-template-columns: repeat(1, 1fr); /* Stack stats */
+        }
     }
 </style>
 
@@ -166,17 +207,17 @@
                 <div class="dot dot-green"></div>
                 <div style="margin-left: 1rem; background: var(--border-color); height: 0.75rem; width: 200px; border-radius: 4px; opacity: 0.5;"></div>
             </div>
-            <div style="padding: 2rem; background: var(--bg-color); min-height: 300px; display: grid; grid-template-columns: 200px 1fr; gap: 2rem;">
+            <div class="preview-grid">
                 <!-- Fake Sidebar -->
-                <div style="gap: 1rem; display: flex; flex-direction: column;">
+                <div class="preview-sidebar">
                      <div style="height: 2rem; background: var(--border-color); border-radius: 0.25rem; width: 80%; opacity: 0.5;"></div>
                      <div style="height: 1rem; background: var(--border-color); border-radius: 0.25rem; width: 100%; opacity: 0.3"></div>
                      <div style="height: 1rem; background: var(--border-color); border-radius: 0.25rem; width: 100%; opacity: 0.3"></div>
                      <div style="height: 1rem; background: var(--border-color); border-radius: 0.25rem; width: 100%; opacity: 0.3"></div>
                 </div>
                 <!-- Fake Content -->
-                <div style="display: grid; gap: 1.5rem;">
-                     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+                <div class="preview-main">
+                     <div class="preview-stats">
                          <div style="height: 80px; background: var(--white); border-radius: 0.5rem; box-shadow: 0 1px 2px rgba(0,0,0,0.05);"></div>
                          <div style="height: 80px; background: var(--white); border-radius: 0.5rem; box-shadow: 0 1px 2px rgba(0,0,0,0.05);"></div>
                          <div style="height: 80px; background: var(--white); border-radius: 0.5rem; box-shadow: 0 1px 2px rgba(0,0,0,0.05);"></div>
@@ -197,7 +238,7 @@
             <p style="color: var(--text-secondary); font-size: 1.1rem;">Solusi Pengadaan Terintegrasi untuk program makan bergizi.</p>
         </div>
         
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
             <!-- Feature 1 -->
             <div class="feature-card">
                 <div style="width: 3rem; height: 3rem; background: rgba(79, 70, 229, 0.1); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; color: #4f46e5; margin-bottom: 1.5rem;">
