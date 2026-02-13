@@ -3,7 +3,7 @@
 @section('content')
 <div class="max-w-[1600px] mx-auto">
     <!-- Mobile/Tablet Tab Navigation -->
-    <div class="lg:hidden flex bg-white dark:bg-gray-800 rounded-lg shadow-sm mb-4 overflow-hidden border border-gray-200 dark:border-gray-700">
+    <div class="md:hidden flex bg-white dark:bg-gray-800 rounded-lg shadow-sm mb-4 overflow-hidden border border-gray-200 dark:border-gray-700">
         <button onclick="switchPreviewTab('preview')" id="tab-preview" class="flex-1 py-3 text-sm font-semibold text-center transition-colors bg-blue-50 text-blue-600 border-b-2 border-blue-600">
             Preview PDF
         </button>
@@ -12,10 +12,10 @@
         </button>
     </div>
 
-    <div class="flex flex-col lg:flex-row h-auto lg:h-[calc(100vh-120px)] gap-6">
+    <div class="flex flex-col md:flex-row h-auto md:h-[calc(100vh-120px)] gap-6">
         <!-- Sidebar / Controls -->
         <!-- Hidden on mobile by default (controlled by JS), Block on desktop -->
-        <div id="settings-panel" class="hidden lg:flex w-full lg:w-[320px] lg:flex-shrink-0 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm flex-col h-auto lg:h-full overflow-y-auto">
+        <div id="settings-panel" class="hidden md:flex w-full md:w-[300px] md:flex-shrink-0 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm flex-col h-auto md:h-full overflow-y-auto">
             <h2 class="text-xl font-bold mb-6 text-gray-800 dark:text-white flex items-center gap-2">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                 Print Settings
@@ -64,7 +64,7 @@
 
         <!-- Preview Area -->
         <!-- Shown on mobile by default, Block on desktop -->
-        <div id="preview-panel" class="flex lg:flex-1 bg-gray-600 rounded-lg overflow-hidden justify-center items-center h-[70vh] lg:h-full shadow-inner relative">
+        <div id="preview-panel" class="flex md:flex-1 bg-gray-600 rounded-lg overflow-hidden justify-center items-center h-[70vh] md:h-full shadow-inner relative">
             <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
                  <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-white opacity-20"></div>
             </div>
@@ -126,8 +126,8 @@
     // Initialize
     document.addEventListener('DOMContentLoaded', () => {
         updatePreview();
-        // Reset tab to preview on load for mobile
-        if (window.innerWidth < 1024) {
+        // Reset tab to preview on load for mobile (now defined as < 768px)
+        if (window.innerWidth < 768) {
             switchPreviewTab('preview');
         }
     });
