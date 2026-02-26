@@ -1,0 +1,5 @@
+
+CREATE USER 'rachmad'@'localhost' IDENTIFIED BY 'Bismillah123!@';
+GRANT ALL PRIVILEGES ON *.* TO 'rachmad'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+EXIT;
